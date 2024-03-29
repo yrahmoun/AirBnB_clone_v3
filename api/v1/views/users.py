@@ -13,7 +13,7 @@ def get_users():
     users_list = []
     for user in users_values:
         users_values.append(user.to_dict())
-    return jsonify(list_users)
+    return jsonify(users_list)
 
 
 @app_views.route('/users/<user_id>', methods=['GET'], strict_slashes=False)
