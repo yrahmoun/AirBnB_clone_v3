@@ -17,7 +17,7 @@ def get_cities(state_id):
         abort(404)
     for city in state.cities:
         cities_list.append(city.to_dict())
-    return jsonify(list_cities)
+    return jsonify(cities_list)
 
 
 @app_views.route('/cities/<city_id>/', methods=['GET'], strict_slashes=False)
